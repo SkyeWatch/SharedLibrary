@@ -15,6 +15,12 @@
     <ClCompile Include="FileManage.cpp" />
     <ClCompile Include="IniFile.cpp" />
     <ClCompile Include="StringTools.cpp" />
+    <ClCompile Include="Thread.cpp" />
+    <ClCompile Include="IDPool.cpp" />
+    <ClCompile Include="Random.cpp" />
+    <ClCompile Include="LogCenter.cpp" />
+    <ClCompile Include="md5.cpp" />
+    <ClCompile Include="zPackEx.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PxcUtilRT.h" />
@@ -29,5 +35,13 @@
     <ClInclude Include="Singleton.h" />
     <ClInclude Include="StringParser.h" />
     <ClInclude Include="StringTools.h" />
+    <ClInclude Include="Thread.h" />
+    <ClInclude Include="IDPool.h" />
+    <ClInclude Include="Random.h" />
+    <ClInclude Include="LogCenter.h" />
+    <ClInclude Include="md5.h" />
+    <ClInclude Include="zPackEx.h" />
+    <ClInclude Include="Delegate.h" />
+    <ClInclude Include="StateMachine.h" />
   </ItemGroup>
 </Project>
