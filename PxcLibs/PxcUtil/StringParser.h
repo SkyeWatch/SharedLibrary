@@ -29,7 +29,7 @@ namespace StringParser{
 //从分隔符中获得数据
 inline int GetParamFromString(std::string Str, std::vector<i32>& IntVec, char Delim = ',')
 {
-	int ipos = Str.find_first_of(Delim), ilastpos = 0;
+	size_t ipos = Str.find_first_of(Delim), ilastpos = 0;
 	while (ipos != std::string::npos)
 	{
 		std::string strSub = Str.substr(ilastpos, ipos - ilastpos);
@@ -44,7 +44,7 @@ inline int GetParamFromString(std::string Str, std::vector<i32>& IntVec, char De
 
 inline int GetParamFromString(std::string Str, std::vector<float>& FloatVec, char Delim = ',')
 {
-	int ipos = Str.find_first_of(Delim), ilastpos = 0;
+	size_t ipos = Str.find_first_of(Delim), ilastpos = 0;
 	while (ipos != std::string::npos)
 	{
 		std::string strSub = Str.substr(ilastpos, ipos - ilastpos);
@@ -59,7 +59,7 @@ inline int GetParamFromString(std::string Str, std::vector<float>& FloatVec, cha
 
 inline int GetParamFromString(std::string Str, std::vector<u32>& uiIntVec, char Delim = ',')
 {
-	int ipos = Str.find_first_of(Delim), ilastpos = 0;
+	size_t ipos = Str.find_first_of(Delim), ilastpos = 0;
 	while (ipos != std::string::npos)
 	{
 		std::string strSub = Str.substr(ilastpos, ipos - ilastpos);
@@ -74,7 +74,7 @@ inline int GetParamFromString(std::string Str, std::vector<u32>& uiIntVec, char 
 
 inline int GetParamFromString(std::string Str, std::vector<std::string>& StringVec, char Delim = ',')
 {
-	int ipos = 0, ilastpos = 0, iquotpos = std::string::npos;
+	size_t ipos = 0, ilastpos = 0, iquotpos = std::string::npos;
 	if (ilastpos >= Str.size())
 		return 0;
 	if (Str.at(ilastpos) == '\"')
@@ -124,7 +124,7 @@ inline int GetParamFromString(std::string Str, std::vector<std::string>& StringV
 template<typename T>
 inline int GetParamFromStringEx(std::string Str, std::vector<T>& vec, char Delim = ',')
 {
-	int ipos = Str.find_first_of(Delim), ilastpos = 0;
+	size_t ipos = Str.find_first_of(Delim), ilastpos = 0;
 	while (ipos != std::string::npos)
 	{
 		std::string strSub = Str.substr(ilastpos, ipos - ilastpos);
