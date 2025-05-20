@@ -57,6 +57,12 @@ public:
 		std::map<std::string, ColHead>::iterator iter = m_mapColHeads.find(strColName);
 		if (iter != m_mapColHeads.end())
 		{
+			if constexpr (std::is_same_v<T, std::string>)
+			{
+				outValue = iter->second.strCurValue;
+				iter->second.bGet = true;
+				return true;
+			}
 			std::stringstream stream;
 			stream << iter->second.strCurValue;
 			stream >> outValue;
@@ -126,6 +132,11 @@ public:
 		template<typename T>
 		bool GetValue(T& outValue)
 		{
+			if constexpr (std::is_same_v<T, std::string>)
+			{
+				outValue = iter->second.strCurValue;
+				return true;
+			}
 			std::stringstream stream;
 			stream << iter->second.strCurValue;
 			stream >> outValue;
